@@ -1,0 +1,16 @@
+fastapi 
+uvicorn
+pydantic 
+pydantic-settings
+docling
+qdrant-client
+psycopg[binary] 
+sqlalchemy 
+alembic
+neo4j
+sentence-transformers
+rank-bm25
+langchain-text-splitters
+pytest
+pytest-asyncio
+boto3
