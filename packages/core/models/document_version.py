@@ -1,5 +1,6 @@
 
 import uuid
+from datetime import datetime
 
 from sqlalchemy import (
     String,
@@ -12,6 +13,7 @@ from sqlalchemy import (
     CheckConstraint,
     UniqueConstraint,
     Index,
+    text,
     func,
 )
 from sqlalchemy.dialects.postgresql import UUID
@@ -29,6 +31,13 @@ class DocumentVersion(Base):
             "document_id",
             "version_number",
             name="unique_document_version"
+        ),
+
+        # Required as the target of composite foreign keys.
+        UniqueConstraint(
+            "id",
+            "document_id",
+            name="unique_version_document_pair"
         ),
 
         CheckConstraint(
@@ -55,10 +64,13 @@ class DocumentVersion(Base):
             "unique_active_version_per_document",
             "document_id",
             unique=True,
-            postgresql_where=(mapped_column("is_active") == True)
+            postgresql_where=text("is_active = TRUE")
         ),
 
-        Index("idx_versions_sha256", "sha256"),
+        Index(
+            "idx_versions_sha256",
+            "sha256"
+        ),
     )
 
     id: Mapped[uuid.UUID] = mapped_column(
@@ -101,26 +113,31 @@ class DocumentVersion(Base):
     status: Mapped[str] = mapped_column(
         String(30),
         nullable=False,
-        default="pending"
+        default="pending",
+        server_default=text("'pending'")
     )
 
     is_active: Mapped[bool] = mapped_column(
         Boolean,
         nullable=False,
-        default=False
+        default=False,
+        server_default=text("FALSE")
     )
 
-    created_at: Mapped[DateTime] = mapped_column(
+    created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True),
-        server_default=func.now()
+        server_default=func.now(),
+        nullable=False
     )
 
-    document = relationship(
+    document: Mapped["Document"] = relationship(
         "Document",
-        back_populates="versions"
+        back_populates="versions",
+        foreign_keys=[document_id]
     )
 
-    ingestion_jobs = relationship(
+    ingestion_jobs: Mapped[list["IngestionJob"]] = relationship(
         "IngestionJob",
-        back_populates="version"
+        back_populates="version",
+        foreign_keys="IngestionJob.version_id"
     )

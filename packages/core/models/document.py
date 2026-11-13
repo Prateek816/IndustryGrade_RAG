@@ -1,16 +1,34 @@
 
 import uuid
+from datetime import datetime
 
-from sqlalchemy import String, DateTime, func
+from sqlalchemy import (
+    String,
+    DateTime,
+    ForeignKeyConstraint,
+    func,
+)
 from sqlalchemy.dialects.postgresql import UUID
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from packages.core.base import Base
-from sqlalchemy.orm import relationship
+
 
 class Document(Base):
 
     __tablename__ = "documents"
+
+    __table_args__ = (
+        ForeignKeyConstraint(
+            ["current_version_id", "id"],
+            [
+                "document_versions.id",
+                "document_versions.document_id"
+            ],
+            name="fk_document_current_version",
+            use_alter=True
+        ),
+    )
 
     id: Mapped[uuid.UUID] = mapped_column(
         UUID(as_uuid=True),
@@ -43,23 +61,27 @@ class Document(Base):
         nullable=True
     )
 
-    created_at: Mapped[DateTime] = mapped_column(
-        DateTime(timezone=True),
-        server_default=func.now()
-    )
-
-    updated_at: Mapped[DateTime] = mapped_column(
+    created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True),
         server_default=func.now(),
-        onupdate=func.now()
-    )
-    versions = relationship(
-        "DocumentVersion",
-        back_populates="document",
-        cascade="all, delete-orphan"
+        nullable=False
     )
 
-    ingestion_jobs = relationship(
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True),
+        server_default=func.now(),
+        onupdate=func.now(),
+        nullable=False
+    )
+
+    versions: Mapped[list["DocumentVersion"]] = relationship(
+        "DocumentVersion",
+        back_populates="document",
+        foreign_keys="DocumentVersion.document_id"
+    )
+
+    ingestion_jobs: Mapped[list["IngestionJob"]] = relationship(
         "IngestionJob",
-        back_populates="document"
+        back_populates="document",
+        foreign_keys="IngestionJob.document_id"
     )
