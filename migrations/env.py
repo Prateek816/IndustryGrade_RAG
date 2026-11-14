@@ -4,7 +4,6 @@ import os
 
 from alembic import context
 from sqlalchemy import engine_from_config, pool
-
 from dotenv import load_dotenv
 
 from packages.core.base import Base
@@ -14,6 +13,7 @@ from packages.core.models import (
     Document,
     DocumentVersion,
     IngestionJob,
+    UploadSession,
 )
 
 load_dotenv()
@@ -67,7 +67,6 @@ def run_migrations_online():
     )
 
     with connectable.connect() as connection:
-
         context.configure(
             connection=connection,
             target_metadata=target_metadata,
