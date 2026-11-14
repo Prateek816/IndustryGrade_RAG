@@ -11,7 +11,8 @@ from sqlalchemy.orm import Session
 
 from packages.core.models import Document, UploadSession
 from packages.storage.s3_client import S3Client
-
+from sqlalchemy import select
+from packages.core.models import Document, UploadSession
 
 class UploadValidationError(Exception):
     """Raised when upload request metadata is invalid."""
@@ -110,7 +111,7 @@ class UploadService:
         *,
         filename: str,
         content_type: str,
-        owner_id: uuid.UUID,
+        owner_id: str,
         title: str | None = None,
         source: str = "upload",
         expected_size: int | None = None,
@@ -178,3 +179,94 @@ class UploadService:
             },
             expires_in=self.url_expiry,
         )
+
+    def complete_upload(
+    self,
+    *,
+    document_id: uuid.UUID,
+    upload_session_id: uuid.UUID,
+    owner_id: str,
+    ) -> dict:
+
+        result = {}
+
+        with self.db.begin():
+
+            upload_session = self.db.scalar(
+                select(UploadSession)
+                .where(
+                    UploadSession.id == upload_session_id,
+                    UploadSession.document_id == document_id,
+                )
+                .with_for_update()
+            )
+
+            if upload_session is None:
+                raise UploadValidationError("Upload session not found")
+
+            document = self.db.get(Document, document_id)
+
+            if document is None or document.owner_id != owner_id:
+                raise UploadValidationError("Document not found")
+
+            # Completion can safely be retried.
+            if upload_session.status != "pending":
+                return {
+                    "status": upload_session.status,
+                    "upload_session_id": upload_session.id,
+                }
+
+            now = datetime.now(timezone.utc)
+
+            if upload_session.expires_at <= now:
+                upload_session.status = "expired"
+
+                result = {
+                    "status": "expired",
+                    "upload_session_id": upload_session.id,
+                }
+
+            else:
+                # Check that the object actually exists in RustFS.
+                metadata = self.storage.head_object(
+                    upload_session.storage_key
+                )
+
+                actual_size = metadata["ContentLength"]
+
+                if actual_size <= 0:
+                    upload_session.status = "rejected"
+                    result = {
+                        "status": "rejected",
+                        "reason": "Uploaded file is empty",
+                    }
+
+                elif actual_size > self.max_upload_size:
+                    upload_session.status = "rejected"
+                    result = {
+                        "status": "rejected",
+                        "reason": "Uploaded file exceeds maximum size",
+                    }
+
+                elif (
+                    upload_session.expected_size is not None
+                    and actual_size != upload_session.expected_size
+                ):
+                    upload_session.status = "rejected"
+                    result = {
+                        "status": "rejected",
+                        "reason": "Uploaded size does not match declared size",
+                    }
+
+                else:
+                    upload_session.status = "uploaded"
+                    upload_session.uploaded_at = now
+
+                    result = {
+                        "status": "uploaded",
+                        "upload_session_id": upload_session.id,
+                        "document_id": document_id,
+                        "actual_size": actual_size,
+                    }
+
+        return result

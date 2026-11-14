@@ -9,7 +9,9 @@ import urllib.request
 import urllib.error
 from dotenv import load_dotenv
 from packages.storage import S3Client
+import hashlib
 
+from packages.ingestion.validation import validate_uploaded_object
 load_dotenv()
 
 s3 = S3Client()
@@ -66,3 +68,22 @@ print("4. Download successful")
 print("   Content:", downloaded_content.decode())
 
 print("\nRustFS integration test passed!")
+
+# 5. Validate the object and calculate SHA-256
+validated = validate_uploaded_object(
+    s3,
+    storage_key=storage_key,
+    expected_content_type=content_type,
+    expected_size=len(content),
+)
+
+expected_hash = hashlib.sha256(content).hexdigest()
+
+assert validated.sha256 == expected_hash
+assert validated.file_size == len(content)
+assert validated.detected_content_type == content_type
+
+print("5. Streaming validation successful")
+print("   SHA-256:", validated.sha256)
+print("   File size:", validated.file_size)
+print("   Detected type:", validated.detected_content_type)
