@@ -85,3 +85,9 @@ class Document(Base):
         back_populates="document",
         foreign_keys="IngestionJob.document_id"
     )
+
+    upload_sessions = relationship(
+        "UploadSession",
+        back_populates="document",
+        cascade="all, delete-orphan",
+    )
