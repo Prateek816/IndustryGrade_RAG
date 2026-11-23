@@ -1,0 +1,979 @@
+{
+  "filename": "research.pdf",
+  "page_count": 3,
+  "elements": [
+    {
+      "element_id": "element-000000",
+      "element_type": "section_header",
+      "text": "Capstone Assignment 1: Letter of Intent (LOI)",
+      "page_number": 1,
+      "bbox": {
+        "left": 72.0,
+        "top": 714.093046245,
+        "right": 407.26757528999997,
+        "bottom": 698.928983685
+      },
+      "heading_path": [
+        "Capstone Assignment 1: Letter of Intent (LOI)"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/texts/0"
+      }
+    },
+    {
+      "element_id": "element-000001",
+      "element_type": "text",
+      "text": "The Letter of Intent builds on your capstone pre-work. You'll take the idea you sketched there and turn it into a clear description of what you're building, who it's for, and what people will do with it. Everything you write here feeds into Assignment 2, where your team turns it into a precise program specification.",
+      "page_number": 1,
+      "bbox": {
+        "left": 72.0,
+        "top": 691.640195572959,
+        "right": 536.6347319737401,
+        "bottom": 652.373268242347
+      },
+      "heading_path": [
+        "Capstone Assignment 1: Letter of Intent (LOI)"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/texts/1"
+      }
+    },
+    {
+      "element_id": "element-000002",
+      "element_type": "text",
+      "text": "You do this in two phases:",
+      "page_number": 1,
+      "bbox": {
+        "left": 72.0,
+        "top": 640.640195572959,
+        "right": 187.74144377189458,
+        "bottom": 631.373268242347
+      },
+      "heading_path": [
+        "Capstone Assignment 1: Letter of Intent (LOI)"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/texts/2"
+      }
+    },
+    {
+      "element_id": "element-000003",
+      "element_type": "list_item",
+      "text": "Phase 1: Define the project. What you're building, who it's for, and why you're the right person to build it.",
+      "page_number": 1,
+      "bbox": {
+        "left": 90.0,
+        "top": 619.640195520459,
+        "right": 531.7759376363476,
+        "bottom": 595.3732680398471
+      },
+      "heading_path": [
+        "Capstone Assignment 1: Letter of Intent (LOI)"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/3"
+      }
+    },
+    {
+      "element_id": "element-000004",
+      "element_type": "list_item",
+      "text": "Phase 2: Actors and use cases. Who uses your protocol, and what each of them does with it.",
+      "page_number": 1,
+      "bbox": {
+        "left": 90.0,
+        "top": 589.640195520459,
+        "right": 520.3479002231104,
+        "bottom": 580.373268189847
+      },
+      "heading_path": [
+        "Capstone Assignment 1: Letter of Intent (LOI)"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/4"
+      }
+    },
+    {
+      "element_id": "element-000005",
+      "element_type": "text",
+      "text": "This is an individual assignment. After you submit it, you'll be grouped into teams. Each team agrees on one idea, which can be one of your LOIs, a mix of several, or something new, and builds it together.",
+      "page_number": 1,
+      "bbox": {
+        "left": 72.0,
+        "top": 553.640195572959,
+        "right": 535.0758684113476,
+        "bottom": 529.373268242347
+      },
+      "heading_path": [
+        "Capstone Assignment 1: Letter of Intent (LOI)"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/texts/5"
+      }
+    },
+    {
+      "element_id": "element-000006",
+      "element_type": "section_header",
+      "text": "How to use AI",
+      "page_number": 1,
+      "bbox": {
+        "left": 72.0,
+        "top": 516.655702769082,
+        "right": 152.81917213169922,
+        "bottom": 504.861432310306
+      },
+      "heading_path": [
+        "How to use AI"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/texts/6"
+      }
+    },
+    {
+      "element_id": "element-000007",
+      "element_type": "text",
+      "text": "AI does not do this work for you. If AI writes your value proposition, your users or your use cases, you haven't shown that you can think it through, and that is what is being assessed. The order is always the same:",
+      "page_number": 1,
+      "bbox": {
+        "left": 72.0,
+        "top": 488.390195572959,
+        "right": 529.9658506893898,
+        "bottom": 449.123268242347
+      },
+      "heading_path": [
+        "How to use AI"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/texts/7"
+      }
+    },
+    {
+      "element_id": "element-000008",
+      "element_type": "list_item",
+      "text": "You draft first. Write your own version before you open an AI tool, and keep it.",
+      "page_number": 1,
+      "bbox": {
+        "left": 90.0,
+        "top": 437.390195520459,
+        "right": 458.15008514811035,
+        "bottom": 428.123268189847
+      },
+      "heading_path": [
+        "How to use AI"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/8"
+      }
+    },
+    {
+      "element_id": "element-000009",
+      "element_type": "list_item",
+      "text": "Then AI attacks it. Ask it what's missing (\"Here is my analysis. What is absent or underweighted?\") and what's weak (\"Critique this. Where is it weak? What breaks it?\").",
+      "page_number": 1,
+      "bbox": {
+        "left": 90.0,
+        "top": 422.390195520459,
+        "right": 497.89116082311034,
+        "bottom": 398.123268039847
+      },
+      "heading_path": [
+        "How to use AI"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/9"
+      }
+    },
+    {
+      "element_id": "element-000010",
+      "element_type": "list_item",
+      "text": "Then you decide. Check each point yourself, and record what you accepted, what you rejected and why. This record is part of your submission.",
+      "page_number": 1,
+      "bbox": {
+        "left": 90.0,
+        "top": 392.390195520459,
+        "right": 528.2924954363477,
+        "bottom": 368.123268039847
+      },
+      "heading_path": [
+        "How to use AI"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/10"
+      }
+    },
+    {
+      "element_id": "element-000011",
+      "element_type": "section_header",
+      "text": "Phase 1: Define the project",
+      "page_number": 1,
+      "bbox": {
+        "left": 72.0,
+        "top": 361.40570276908204,
+        "right": 228.83393886166016,
+        "bottom": 349.611432310306
+      },
+      "heading_path": [
+        "Phase 1: Define the project"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/texts/11"
+      }
+    },
+    {
+      "element_id": "element-000012",
+      "element_type": "text",
+      "text": "Start from your capstone pre-work. Your idea must still fit one of the four categories: Real World Assets, Tokenization, Payments or Collectibles. Scope it to something you can build in two weeks: a narrow slice of one category, not the whole category.",
+      "page_number": 1,
+      "bbox": {
+        "left": 72.0,
+        "top": 333.140195572959,
+        "right": 534.1297150893896,
+        "bottom": 293.873268242347
+      },
+      "heading_path": [
+        "Phase 1: Define the project"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/texts/12"
+      }
+    },
+    {
+      "element_id": "element-000013",
+      "element_type": "section_header",
+      "text": "Part A: Write it yourself",
+      "page_number": 1,
+      "bbox": {
+        "left": 72.0,
+        "top": 281.812031505,
+        "right": 188.99414138999998,
+        "bottom": 271.702656465
+      },
+      "heading_path": [
+        "Part A: Write it yourself"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/texts/13"
+      }
+    },
+    {
+      "element_id": "element-000014",
+      "element_type": "text",
+      "text": "No AI in this part. Write or update these sections on your own. If your idea changed since the pre-work, rewrite them.",
+      "page_number": 1,
+      "bbox": {
+        "left": 72.0,
+        "top": 265.640195572959,
+        "right": 534.7571101573778,
+        "bottom": 241.37326824234697
+      },
+      "heading_path": [
+        "Part A: Write it yourself"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/texts/14"
+      }
+    },
+    {
+      "element_id": "element-000015",
+      "element_type": "list_item",
+      "text": "Overview. 2-5 sentences, updated from your pre-work. Someone reading only this should understand what you're building.",
+      "page_number": 1,
+      "bbox": {
+        "left": 90.0,
+        "top": 229.64019552045897,
+        "right": 508.9922610113476,
+        "bottom": 205.37326803984706
+      },
+      "heading_path": [
+        "Part A: Write it yourself"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/15"
+      }
+    },
+    {
+      "element_id": "element-000016",
+      "element_type": "list_item",
+      "text": "Value proposition and product-market fit. Update the paragraph from your pre-work: what problem exists, who has it, and why your solution fits it.",
+      "page_number": 1,
+      "bbox": {
+        "left": 90.0,
+        "top": 199.64019552045897,
+        "right": 516.3056354737403,
+        "bottom": 175.37326803984706
+      },
+      "heading_path": [
+        "Part A: Write it yourself"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/16"
+      }
+    },
+    {
+      "element_id": "element-000017",
+      "element_type": "list_item",
+      "text": "Target markets and users. New in the LOI: 2-3 market segments, and your top 1-2 user profiles. Who they are, what they do today, and what would make them switch.",
+      "page_number": 1,
+      "bbox": {
+        "left": 90.0,
+        "top": 169.64019552045897,
+        "right": 536.1370414481104,
+        "bottom": 145.37326803984706
+      },
+      "heading_path": [
+        "Part A: Write it yourself"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/17"
+      }
+    },
+    {
+      "element_id": "element-000018",
+      "element_type": "list_item",
+      "text": "Competitor landscape. New in the LOI. Do real research: DefiLlama, Colosseum hackathon winners, GitHub and X. List who already exists, with links, and how you're different.",
+      "page_number": 1,
+      "bbox": {
+        "left": 90.0,
+        "top": 139.64019552045897,
+        "right": 510.06064066134763,
+        "bottom": 115.37326803984706
+      },
+      "heading_path": [
+        "Part A: Write it yourself"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/18"
+      }
+    },
+    {
+      "element_id": "element-000019",
+      "element_type": "list_item",
+      "text": "Founder-market fit. Update it from your pre-work: your background, technical skills, motivation and network. Why you?",
+      "page_number": 1,
+      "bbox": {
+        "left": 90.0,
+        "top": 109.64019552045897,
+        "right": 534.5133177863476,
+        "bottom": 85.37326803984706
+      },
+      "heading_path": [
+        "Part A: Write it yourself"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/19"
+      }
+    },
+    {
+      "element_id": "element-000020",
+      "element_type": "section_header",
+      "text": "Part B: Red team it",
+      "page_number": 2,
+      "bbox": {
+        "left": 72.0,
+        "top": 716.062031505,
+        "right": 165.29882817,
+        "bottom": 705.952656465
+      },
+      "heading_path": [
+        "Part B: Red team it"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/texts/20"
+      }
+    },
+    {
+      "element_id": "element-000021",
+      "element_type": "text",
+      "text": "Now bring in AI and attack everything from Part A, including your founder-market fit. Ask what's missing, such as competitors you didn't find, and where your strategy breaks. Update Phase 1 with the criticism you agree with, and log every main point: accepted or rejected, and why.",
+      "page_number": 2,
+      "bbox": {
+        "left": 72.0,
+        "top": 699.890195572959,
+        "right": 537.8965435573778,
+        "bottom": 660.623268242347
+      },
+      "heading_path": [
+        "Part B: Red team it"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/texts/21"
+      }
+    },
+    {
+      "element_id": "element-000022",
+      "element_type": "section_header",
+      "text": "Phase 2: Actors and use cases",
+      "page_number": 2,
+      "bbox": {
+        "left": 72.0,
+        "top": 647.905702769082,
+        "right": 243.16124279553713,
+        "bottom": 636.111432310306
+      },
+      "heading_path": [
+        "Phase 2: Actors and use cases"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/texts/22"
+      }
+    },
+    {
+      "element_id": "element-000023",
+      "element_type": "text",
+      "text": "In this phase you describe what people do with your protocol, in plain words. You don't need accounts, PDAs or instruction handlers yet. Those come in Assignment 2, where each use case becomes one or more precise requirements.",
+      "page_number": 2,
+      "bbox": {
+        "left": 72.0,
+        "top": 619.640195572959,
+        "right": 529.7596575073779,
+        "bottom": 580.373268242347
+      },
+      "heading_path": [
+        "Phase 2: Actors and use cases"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/texts/23"
+      }
+    },
+    {
+      "element_id": "element-000024",
+      "element_type": "section_header",
+      "text": "Part A: Identify the actors",
+      "page_number": 2,
+      "bbox": {
+        "left": 72.0,
+        "top": 568.312031505,
+        "right": 199.57617186000002,
+        "bottom": 558.202656465
+      },
+      "heading_path": [
+        "Part A: Identify the actors"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/texts/24"
+      }
+    },
+    {
+      "element_id": "element-000025",
+      "element_type": "text",
+      "text": "List everyone who interacts with your protocol, grouped as:",
+      "page_number": 2,
+      "bbox": {
+        "left": 72.0,
+        "top": 552.140195572959,
+        "right": 336.7903832468945,
+        "bottom": 542.873268242347
+      },
+      "heading_path": [
+        "Part A: Identify the actors"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/texts/25"
+      }
+    },
+    {
+      "element_id": "element-000026",
+      "element_type": "list_item",
+      "text": "Direct actors: people who sign transactions, such as creators, buyers or stakers.",
+      "page_number": 2,
+      "bbox": {
+        "left": 90.0,
+        "top": 532.0640236114551,
+        "right": 461.23172797311037,
+        "bottom": 521.873268189847
+      },
+      "heading_path": [
+        "Part A: Identify the actors"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/26"
+      }
+    },
+    {
+      "element_id": "element-000027",
+      "element_type": "list_item",
+      "text": "Beneficiaries: people who get value without signing anything.",
+      "page_number": 2,
+      "bbox": {
+        "left": 90.0,
+        "top": 517.0640236114551,
+        "right": 383.05850902311033,
+        "bottom": 506.873268189847
+      },
+      "heading_path": [
+        "Part A: Identify the actors"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/27"
+      }
+    },
+    {
+      "element_id": "element-000028",
+      "element_type": "list_item",
+      "text": "Administrators: whoever controls the protocol's settings, such as an admin wallet or governance.",
+      "page_number": 2,
+      "bbox": {
+        "left": 90.0,
+        "top": 502.06402361145507,
+        "right": 483.5336644721582,
+        "bottom": 476.873268039847
+      },
+      "heading_path": [
+        "Part A: Identify the actors"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/28"
+      }
+    },
+    {
+      "element_id": "element-000029",
+      "element_type": "list_item",
+      "text": "Stakeholders: anyone else with an interest, such as token holders or liquidity partners.",
+      "page_number": 2,
+      "bbox": {
+        "left": 90.0,
+        "top": 472.06402361145507,
+        "right": 492.9577494731104,
+        "bottom": 461.873268189847
+      },
+      "heading_path": [
+        "Part A: Identify the actors"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/29"
+      }
+    },
+    {
+      "element_id": "element-000030",
+      "element_type": "section_header",
+      "text": "Part B: Write the use cases",
+      "page_number": 2,
+      "bbox": {
+        "left": 72.0,
+        "top": 455.812031505,
+        "right": 204.31640656500002,
+        "bottom": 445.702656465
+      },
+      "heading_path": [
+        "Part B: Write the use cases"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/texts/30"
+      }
+    },
+    {
+      "element_id": "element-000031",
+      "element_type": "text",
+      "text": "A use case is one thing one actor does with your protocol. Give each one an ID (UC-01, UC-02...), because Assignment 2 will trace back to them. Write each one with this template:",
+      "page_number": 2,
+      "bbox": {
+        "left": 72.0,
+        "top": 440.56402361145507,
+        "right": 503.39636033237787,
+        "bottom": 415.373268039847
+      },
+      "heading_path": [
+        "Part B: Write the use cases"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/texts/31"
+      }
+    },
+    {
+      "element_id": "element-000032",
+      "element_type": "list_item",
+      "text": "ID and name: a verb and an object, such as Deposit USDC.",
+      "page_number": 2,
+      "bbox": {
+        "left": 90.0,
+        "top": 404.56402361145507,
+        "right": 366.9247912481104,
+        "bottom": 394.373268189847
+      },
+      "heading_path": [
+        "Part B: Write the use cases"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/32"
+      }
+    },
+    {
+      "element_id": "element-000033",
+      "element_type": "list_item",
+      "text": "Actor: who does it and signs the transaction.",
+      "page_number": 2,
+      "bbox": {
+        "left": 90.0,
+        "top": 389.56402361145507,
+        "right": 307.0902252731104,
+        "bottom": 379.373268189847
+      },
+      "heading_path": [
+        "Part B: Write the use cases"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/33"
+      }
+    },
+    {
+      "element_id": "element-000034",
+      "element_type": "list_item",
+      "text": "Goal: one sentence on what they want to achieve.",
+      "page_number": 2,
+      "bbox": {
+        "left": 90.0,
+        "top": 374.56402361145507,
+        "right": 331.6988183231104,
+        "bottom": 364.373268189847
+      },
+      "heading_path": [
+        "Part B: Write the use cases"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/34"
+      }
+    },
+    {
+      "element_id": "element-000035",
+      "element_type": "list_item",
+      "text": "What changes: in plain words, what is different on-chain after it happens.",
+      "page_number": 2,
+      "bbox": {
+        "left": 90.0,
+        "top": 359.56402361145507,
+        "right": 435.7753741481103,
+        "bottom": 349.373268189847
+      },
+      "heading_path": [
+        "Part B: Write the use cases"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/35"
+      }
+    },
+    {
+      "element_id": "element-000036",
+      "element_type": "list_item",
+      "text": "Off-chain: what the app or website does around it, such as showing a confirmation or sending an email.",
+      "page_number": 2,
+      "bbox": {
+        "left": 90.0,
+        "top": 344.56402361145507,
+        "right": 539.2588163363476,
+        "bottom": 319.373268039847
+      },
+      "heading_path": [
+        "Part B: Write the use cases"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/36"
+      }
+    },
+    {
+      "element_id": "element-000037",
+      "element_type": "text",
+      "text": "Example: the main use cases for an invoice-financing protocol, where businesses get paid early for their invoices and lenders earn a fee for funding them. The table shows only the key fields; write every field of the template for your own use cases.",
+      "page_number": 2,
+      "bbox": {
+        "left": 72.0,
+        "top": 313.640195572959,
+        "right": 537.3280450062939,
+        "bottom": 274.37326824234697
+      },
+      "heading_path": [
+        "Part B: Write the use cases"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/texts/37"
+      }
+    },
+    {
+      "element_id": "element-000038",
+      "element_type": "table",
+      "text": "| ID | Name | Actor | What changes |\n|:------|:----------------------|:---------|:--------------------------------------------------------------------|\n| UC-01 | Create a lending pool | Admin | A new pool exists that accepts USDC. |\n| UC-02 | Deposit USDC | Lender | The lender's USDC moves into the pool, and their share is recorded. |\n| UC-03 | Submit an invoice | Business | A new invoice is recorded, waiting for approval. |\n| UC-04 | Approve an invoice | Verifier | The invoice is marked as approved. |\n| UC-05 | Fund an invoice | Business | The business receives an advance from the pool. |",
+      "page_number": 2,
+      "bbox": {
+        "left": 71.42376708984375,
+        "top": 267.8331298828125,
+        "right": 541.2182006835938,
+        "bottom": 90.22955322265625
+      },
+      "heading_path": [
+        "Part B: Write the use cases"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/tables/0"
+      }
+    },
+    {
+      "element_id": "element-000039",
+      "element_type": "table",
+      "text": "| 0 | 1 | 2 | 3 |\n|:------|:--------------------|:---------|:-------------------------------------------------------------------------|\n| UC-06 | Repay an invoice | Business | The repayment plus a fee returns to the pool, and the invoice is closed. |\n| UC-07 | Withdraw with yield | Lender | The lender gets their USDC back, plus their share of the fees. |",
+      "page_number": 3,
+      "bbox": {
+        "left": 71.71708679199219,
+        "top": 720.5450592041016,
+        "right": 541.1473388671875,
+        "bottom": 643.3879852294922
+      },
+      "heading_path": [
+        "Part B: Write the use cases"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/tables/1"
+      }
+    },
+    {
+      "element_id": "element-000040",
+      "element_type": "text",
+      "text": "Write 5-10 use cases that cover the main flow of your protocol, from setup to the core actions. Skip edge cases for now. If a use case does two separate things, such as \"submit and fund an invoice\", split it into two.",
+      "page_number": 3,
+      "bbox": {
+        "left": 72.0,
+        "top": 624.140195572959,
+        "right": 532.6908269737403,
+        "bottom": 584.873268242347
+      },
+      "heading_path": [
+        "Part B: Write the use cases"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/texts/38"
+      }
+    },
+    {
+      "element_id": "element-000041",
+      "element_type": "section_header",
+      "text": "What to submit",
+      "page_number": 3,
+      "bbox": {
+        "left": 72.0,
+        "top": 572.155702769082,
+        "right": 162.65116483666014,
+        "bottom": 560.361432310306
+      },
+      "heading_path": [
+        "What to submit"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/texts/39"
+      }
+    },
+    {
+      "element_id": "element-000042",
+      "element_type": "text",
+      "text": "One document (PDF or Google Doc), submitted in Google Classroom, with your name at the top. It has two sections:",
+      "page_number": 3,
+      "bbox": {
+        "left": 72.0,
+        "top": 543.890195572959,
+        "right": 527.1638026777783,
+        "bottom": 519.623268242347
+      },
+      "heading_path": [
+        "What to submit"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/texts/40"
+      }
+    },
+    {
+      "element_id": "element-000043",
+      "element_type": "list_item",
+      "text": "Section 1: Your LOI. Your overview, value proposition, target markets, competitors, founder-market fit, actors and use cases. The final version, after the red team. About 2-4 pages.",
+      "page_number": 3,
+      "bbox": {
+        "left": 90.0,
+        "top": 507.890195520459,
+        "right": 534.9889206731104,
+        "bottom": 483.623268039847
+      },
+      "heading_path": [
+        "What to submit"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/41"
+      }
+    },
+    {
+      "element_id": "element-000044",
+      "element_type": "list_item",
+      "text": "Section 2: Red-team log. Your first drafts next to the AI's critique, with what you accepted, what you rejected and why. This is your proof of work.",
+      "page_number": 3,
+      "bbox": {
+        "left": 90.0,
+        "top": 477.890195520459,
+        "right": 535.6066912237403,
+        "bottom": 453.623268039847
+      },
+      "heading_path": [
+        "What to submit"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/42"
+      }
+    },
+    {
+      "element_id": "element-000045",
+      "element_type": "section_header",
+      "text": "Before you submit",
+      "page_number": 3,
+      "bbox": {
+        "left": 72.0,
+        "top": 447.562031505,
+        "right": 163.32421865999999,
+        "bottom": 437.452656465
+      },
+      "heading_path": [
+        "Before you submit"
+      ],
+      "metadata": {
+        "docling_level": 1,
+        "docling_ref": "#/texts/43"
+      }
+    },
+    {
+      "element_id": "element-000046",
+      "element_type": "checkbox_unselected",
+      "text": "Your overview explains the project in 2-5 sentences.",
+      "page_number": 3,
+      "bbox": {
+        "left": 90.84199523925781,
+        "top": 432.73321533203125,
+        "right": 341.2682355731104,
+        "bottom": 420.745767917347
+      },
+      "heading_path": [
+        "Before you submit"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/44"
+      }
+    },
+    {
+      "element_id": "element-000047",
+      "element_type": "checkbox_unselected",
+      "text": "Your competitor list has real projects, with links.",
+      "page_number": 3,
+      "bbox": {
+        "left": 90.9831771850586,
+        "top": 416.2154541015625,
+        "right": 321.57556409811036,
+        "bottom": 404.245767917347
+      },
+      "heading_path": [
+        "Before you submit"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/45"
+      }
+    },
+    {
+      "element_id": "element-000048",
+      "element_type": "checkbox_unselected",
+      "text": "Every use case has an ID, a name, an actor, a goal and what changes.",
+      "page_number": 3,
+      "bbox": {
+        "left": 91.01268005371094,
+        "top": 399.84466552734375,
+        "right": 412.16959942311036,
+        "bottom": 387.745767917347
+      },
+      "heading_path": [
+        "Before you submit"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/46"
+      }
+    },
+    {
+      "element_id": "element-000049",
+      "element_type": "checkbox_unselected",
+      "text": "Every actor who signs a transaction appears in at least one use case.",
+      "page_number": 3,
+      "bbox": {
+        "left": 91.01374053955078,
+        "top": 383.1767272949219,
+        "right": 411.0216229481104,
+        "bottom": 371.245767917347
+      },
+      "heading_path": [
+        "Before you submit"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/47"
+      }
+    },
+    {
+      "element_id": "element-000050",
+      "element_type": "checkbox_unselected",
+      "text": "Your red-team log shows what you accepted and rejected, and why.",
+      "page_number": 3,
+      "bbox": {
+        "left": 91.04144287109375,
+        "top": 366.653564453125,
+        "right": 408.55150402311034,
+        "bottom": 354.745767917347
+      },
+      "heading_path": [
+        "Before you submit"
+      ],
+      "metadata": {
+        "docling_level": 2,
+        "docling_ref": "#/texts/48"
+      }
+    }
+  ],
+  "full_text": "Capstone Assignment 1: Letter of Intent (LOI)\n\nThe Letter of Intent builds on your capstone pre-work. You'll take the idea you sketched there and turn it into a clear description of what you're building, who it's for, and what people will do with it. Everything you write here feeds into Assignment 2, where your team turns it into a precise program specification.\n\nYou do this in two phases:\n\nPhase 1: Define the project. What you're building, who it's for, and why you're the right person to build it.\n\nPhase 2: Actors and use cases. Who uses your protocol, and what each of them does with it.\n\nThis is an individual assignment. After you submit it, you'll be grouped into teams. Each team agrees on one idea, which can be one of your LOIs, a mix of several, or something new, and builds it together.\n\nHow to use AI\n\nAI does not do this work for you. If AI writes your value proposition, your users or your use cases, you haven't shown that you can think it through, and that is what is being assessed. The order is always the same:\n\nYou draft first. Write your own version before you open an AI tool, and keep it.\n\nThen AI attacks it. Ask it what's missing (\"Here is my analysis. What is absent or underweighted?\") and what's weak (\"Critique this. Where is it weak? What breaks it?\").\n\nThen you decide. Check each point yourself, and record what you accepted, what you rejected and why. This record is part of your submission.\n\nPhase 1: Define the project\n\nStart from your capstone pre-work. Your idea must still fit one of the four categories: Real World Assets, Tokenization, Payments or Collectibles. Scope it to something you can build in two weeks: a narrow slice of one category, not the whole category.\n\nPart A: Write it yourself\n\nNo AI in this part. Write or update these sections on your own. If your idea changed since the pre-work, rewrite them.\n\nOverview. 2-5 sentences, updated from your pre-work. Someone reading only this should understand what you're building.\n\nValue proposition and product-market fit. Update the paragraph from your pre-work: what problem exists, who has it, and why your solution fits it.\n\nTarget markets and users. New in the LOI: 2-3 market segments, and your top 1-2 user profiles. Who they are, what they do today, and what would make them switch.\n\nCompetitor landscape. New in the LOI. Do real research: DefiLlama, Colosseum hackathon winners, GitHub and X. List who already exists, with links, and how you're different.\n\nFounder-market fit. Update it from your pre-work: your background, technical skills, motivation and network. Why you?\n\nPart B: Red team it\n\nNow bring in AI and attack everything from Part A, including your founder-market fit. Ask what's missing, such as competitors you didn't find, and where your strategy breaks. Update Phase 1 with the criticism you agree with, and log every main point: accepted or rejected, and why.\n\nPhase 2: Actors and use cases\n\nIn this phase you describe what people do with your protocol, in plain words. You don't need accounts, PDAs or instruction handlers yet. Those come in Assignment 2, where each use case becomes one or more precise requirements.\n\nPart A: Identify the actors\n\nList everyone who interacts with your protocol, grouped as:\n\nDirect actors: people who sign transactions, such as creators, buyers or stakers.\n\nBeneficiaries: people who get value without signing anything.\n\nAdministrators: whoever controls the protocol's settings, such as an admin wallet or governance.\n\nStakeholders: anyone else with an interest, such as token holders or liquidity partners.\n\nPart B: Write the use cases\n\nA use case is one thing one actor does with your protocol. Give each one an ID (UC-01, UC-02...), because Assignment 2 will trace back to them. Write each one with this template:\n\nID and name: a verb and an object, such as Deposit USDC.\n\nActor: who does it and signs the transaction.\n\nGoal: one sentence on what they want to achieve.\n\nWhat changes: in plain words, what is different on-chain after it happens.\n\nOff-chain: what the app or website does around it, such as showing a confirmation or sending an email.\n\nExample: the main use cases for an invoice-financing protocol, where businesses get paid early for their invoices and lenders earn a fee for funding them. The table shows only the key fields; write every field of the template for your own use cases.\n\n| ID | Name | Actor | What changes |\n|:------|:----------------------|:---------|:--------------------------------------------------------------------|\n| UC-01 | Create a lending pool | Admin | A new pool exists that accepts USDC. |\n| UC-02 | Deposit USDC | Lender | The lender's USDC moves into the pool, and their share is recorded. |\n| UC-03 | Submit an invoice | Business | A new invoice is recorded, waiting for approval. |\n| UC-04 | Approve an invoice | Verifier | The invoice is marked as approved. |\n| UC-05 | Fund an invoice | Business | The business receives an advance from the pool. |\n\n| 0 | 1 | 2 | 3 |\n|:------|:--------------------|:---------|:-------------------------------------------------------------------------|\n| UC-06 | Repay an invoice | Business | The repayment plus a fee returns to the pool, and the invoice is closed. |\n| UC-07 | Withdraw with yield | Lender | The lender gets their USDC back, plus their share of the fees. |\n\nWrite 5-10 use cases that cover the main flow of your protocol, from setup to the core actions. Skip edge cases for now. If a use case does two separate things, such as \"submit and fund an invoice\", split it into two.\n\nWhat to submit\n\nOne document (PDF or Google Doc), submitted in Google Classroom, with your name at the top. It has two sections:\n\nSection 1: Your LOI. Your overview, value proposition, target markets, competitors, founder-market fit, actors and use cases. The final version, after the red team. About 2-4 pages.\n\nSection 2: Red-team log. Your first drafts next to the AI's critique, with what you accepted, what you rejected and why. This is your proof of work.\n\nBefore you submit\n\nYour overview explains the project in 2-5 sentences.\n\nYour competitor list has real projects, with links.\n\nEvery use case has an ID, a name, an actor, a goal and what changes.\n\nEvery actor who signs a transaction appears in at least one use case.\n\nYour red-team log shows what you accepted and rejected, and why.",
+  "markdown": "## Capstone Assignment 1: Letter of Intent (LOI)\n\nThe Letter of Intent builds on your capstone pre-work. You'll take the idea you sketched there and turn it into a clear description of what you're building, who it's for, and what people will do with it. Everything you write here feeds into Assignment 2, where your team turns it into a precise program specification.\n\nYou do this in two phases:\n\n1. Phase 1: Define the project. What you're building, who it's for, and why you're the right person to build it.\n2. Phase 2: Actors and use cases. Who uses your protocol, and what each of them does with it.\n\nThis is an individual assignment. After you submit it, you'll be grouped into teams. Each team agrees on one idea, which can be one of your LOIs, a mix of several, or something new, and builds it together.\n\n## How to use AI\n\nAI does not do this work for you. If AI writes your value proposition, your users or your use cases, you haven't shown that you can think it through, and that is what is being assessed. The order is always the same:\n\n1. You draft first. Write your own version before you open an AI tool, and keep it.\n2. Then AI attacks it. Ask it what's missing (\"Here is my analysis. What is absent or underweighted?\") and what's weak (\"Critique this. Where is it weak? What breaks it?\").\n3. Then you decide. Check each point yourself, and record what you accepted, what you rejected and why. This record is part of your submission.\n\n## Phase 1: Define the project\n\nStart from your capstone pre-work. Your idea must still fit one of the four categories: Real World Assets, Tokenization, Payments or Collectibles. Scope it to something you can build in two weeks: a narrow slice of one category, not the whole category.\n\n## Part A: Write it yourself\n\nNo AI in this part. Write or update these sections on your own. If your idea changed since the pre-work, rewrite them.\n\n1. Overview. 2-5 sentences, updated from your pre-work. Someone reading only this should understand what you're building.\n2. Value proposition and product-market fit. Update the paragraph from your pre-work: what problem exists, who has it, and why your solution fits it.\n3. Target markets and users. New in the LOI: 2-3 market segments, and your top 1-2 user profiles. Who they are, what they do today, and what would make them switch.\n4. Competitor landscape. New in the LOI. Do real research: DefiLlama, Colosseum hackathon winners, GitHub and X. List who already exists, with links, and how you're different.\n5. Founder-market fit. Update it from your pre-work: your background, technical skills, motivation and network. Why you?\n\n## Part B: Red team it\n\nNow bring in AI and attack everything from Part A, including your founder-market fit. Ask what's missing, such as competitors you didn't find, and where your strategy breaks. Update Phase 1 with the criticism you agree with, and log every main point: accepted or rejected, and why.\n\n## Phase 2: Actors and use cases\n\nIn this phase you describe what people do with your protocol, in plain words. You don't need accounts, PDAs or instruction handlers yet. Those come in Assignment 2, where each use case becomes one or more precise requirements.\n\n## Part A: Identify the actors\n\nList everyone who interacts with your protocol, grouped as:\n\n- Direct actors: people who sign transactions, such as creators, buyers or stakers.\n- Beneficiaries: people who get value without signing anything.\n- Administrators: whoever controls the protocol's settings, such as an admin wallet or governance.\n- Stakeholders: anyone else with an interest, such as token holders or liquidity partners.\n\n## Part B: Write the use cases\n\nA use case is one thing one actor does with your protocol. Give each one an ID (UC-01, UC-02...), because Assignment 2 will trace back to them. Write each one with this template:\n\n- ID and name: a verb and an object, such as Deposit USDC.\n- Actor: who does it and signs the transaction.\n- Goal: one sentence on what they want to achieve.\n- What changes: in plain words, what is different on-chain after it happens.\n- Off-chain: what the app or website does around it, such as showing a confirmation or sending an email.\n\nExample: the main use cases for an invoice-financing protocol, where businesses get paid early for their invoices and lenders earn a fee for funding them. The table shows only the key fields; write every field of the template for your own use cases.\n\n| ID | Name | Actor | What changes |\n|-------|-----------------------|----------|---------------------------------------------------------------------|\n| UC-01 | Create a lending pool | Admin | A new pool exists that accepts USDC. |\n| UC-02 | Deposit USDC | Lender | The lender's USDC moves into the pool, and their share is recorded. |\n| UC-03 | Submit an invoice | Business | A new invoice is recorded, waiting for approval. |\n| UC-04 | Approve an invoice | Verifier | The invoice is marked as approved. |\n| UC-05 | Fund an invoice | Business | The business receives an advance from the pool. |\n\n| UC-06 | Repay an invoice | Business | The repayment plus a fee returns to the pool, and the invoice is closed. |\n|---------|---------------------|------------|----------------------------------------------------------------------------|\n| UC-07 | Withdraw with yield | Lender | The lender gets their USDC back, plus their share of the fees. |\n\nWrite 5-10 use cases that cover the main flow of your protocol, from setup to the core actions. Skip edge cases for now. If a use case does two separate things, such as \"submit and fund an invoice\", split it into two.\n\n## What to submit\n\nOne document (PDF or Google Doc), submitted in Google Classroom, with your name at the top. It has two sections:\n\n1. Section 1: Your LOI. Your overview, value proposition, target markets, competitors, founder-market fit, actors and use cases. The final version, after the red team. About 2-4 pages.\n2. Section 2: Red-team log. Your first drafts next to the AI's critique, with what you accepted, what you rejected and why. This is your proof of work.\n\n## Before you submit\n\n- [ ] Your overview explains the project in 2-5 sentences.\n\n- [ ] Your competitor list has real projects, with links.\n\n- [ ] Every use case has an ID, a name, an actor, a goal and what changes.\n\n- [ ] Every actor who signs a transaction appears in at least one use case.\n\n- [ ] Your red-team log shows what you accepted and rejected, and why.",
+  "total_characters": 6336,
+  "needs_ocr_review": false
+}

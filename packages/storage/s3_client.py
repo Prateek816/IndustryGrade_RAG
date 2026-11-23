@@ -72,3 +72,21 @@ class S3Client:
             Bucket=self.bucket,
             Key=storage_key,
         )
+    
+    def put_object(
+        self,
+        storage_key: str,
+        body: bytes,
+        content_type: str = "application/octet-stream",
+    ):
+        return self.client.put_object(
+            Bucket=self.bucket,
+            Key=storage_key,
+            Body=body,
+            ContentType=content_type,
+        )
+
+
+
+
+

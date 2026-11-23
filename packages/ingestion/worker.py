@@ -10,8 +10,18 @@ from packages.core.services.ingestion_service import IngestionService
 from packages.ingestion.validation import (
     FileValidationError,
     validate_uploaded_object,
+
 )
 from packages.storage.s3_client import S3Client
+
+import json
+
+from packages.ingestion.parsing.docling_parser import (
+    parse_rustfs_object,
+)
+from packages.ingestion.parsing.preprocess import (
+    preprocess_document,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -117,6 +127,43 @@ def process_upload_session(upload_session_id: uuid.UUID):
         )
         raise
 
+    
+    # 3.5 Parse and preprocess the original document.
+
+    parsed = parse_rustfs_object(
+        storage=storage,
+        storage_key=storage_key,
+        filename=upload.filename,
+    )
+
+    parsed = preprocess_document(parsed)
+
+    parsed_key = (
+        f"processed/{document_id}/"
+        f"{registration.version_id}/parsed.json"
+    )
+
+    storage.put_object(
+        storage_key=parsed_key,
+        body=json.dumps(
+            parsed.to_dict(),
+            ensure_ascii=False,
+            indent=2,
+        ).encode("utf-8"),
+        content_type="application/json",
+    )
+
+    logger.info(
+        "Parsing completed: version=%s pages=%s elements=%s chars=%s "
+        "ocr_review=%s parsed_key=%s",
+        registration.version_id,
+        parsed.page_count,
+        len(parsed.elements),
+        parsed.total_characters,
+        parsed.needs_ocr_review,
+        parsed_key,
+    )
+    
     # 4. Mark upload as completed.
     with SessionLocal() as db:
         with db.begin():

@@ -16,3 +16,4 @@ pytest-asyncio
 boto3
 psycopg2-binary
 python-dotenv
+tiktoken

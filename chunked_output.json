@@ -1,0 +1,343 @@
+{
+  "parents": [
+    {
+      "id": "e7aa990b-0d5d-5b76-981b-923822efe0da",
+      "version_id": "76162eb1-78f2-49b0-939d-0ee57576c410",
+      "heading_path": [
+        "Capstone Assignment 1: Letter of Intent (LOI)"
+      ],
+      "content": "Capstone Assignment 1: Letter of Intent (LOI)\n\nThe Letter of Intent builds on your capstone pre-work. You'll take the idea you sketched there and turn it into a clear description of what you're building, who it's for, and what people will do with it. Everything you write here feeds into Assignment 2, where your team turns it into a precise program specification.\n\nYou do this in two phases:\n\nPhase 1: Define the project. What you're building, who it's for, and why you're the right person to build it.\n\nPhase 2: Actors and use cases. Who uses your protocol, and what each of them does with it.\n\nThis is an individual assignment. After you submit it, you'll be grouped into teams. Each team agrees on one idea, which can be one of your LOIs, a mix of several, or something new, and builds it together.",
+      "page_start": 1,
+      "page_end": 1,
+      "child_ids": [
+        "3b321174-fe46-591e-b598-2200bfa3ebd4"
+      ]
+    },
+    {
+      "id": "dfcbc2ce-bd52-5291-aa32-460e469ec646",
+      "version_id": "76162eb1-78f2-49b0-939d-0ee57576c410",
+      "heading_path": [
+        "How to use AI"
+      ],
+      "content": "How to use AI\n\nAI does not do this work for you. If AI writes your value proposition, your users or your use cases, you haven't shown that you can think it through, and that is what is being assessed. The order is always the same:\n\nYou draft first. Write your own version before you open an AI tool, and keep it.\n\nThen AI attacks it. Ask it what's missing (\"Here is my analysis. What is absent or underweighted?\") and what's weak (\"Critique this. Where is it weak? What breaks it?\").\n\nThen you decide. Check each point yourself, and record what you accepted, what you rejected and why. This record is part of your submission.",
+      "page_start": 1,
+      "page_end": 1,
+      "child_ids": [
+        "9fbc6755-a2a1-532a-8657-0d0d238a8852"
+      ]
+    },
+    {
+      "id": "4f40e370-b620-50ee-b8df-c0a22a3f425d",
+      "version_id": "76162eb1-78f2-49b0-939d-0ee57576c410",
+      "heading_path": [
+        "Phase 1: Define the project"
+      ],
+      "content": "Phase 1: Define the project\n\nStart from your capstone pre-work. Your idea must still fit one of the four categories: Real World Assets, Tokenization, Payments or Collectibles. Scope it to something you can build in two weeks: a narrow slice of one category, not the whole category.",
+      "page_start": 1,
+      "page_end": 1,
+      "child_ids": [
+        "c0507570-b696-5e95-b4dc-c8cdf11ede91"
+      ]
+    },
+    {
+      "id": "45fe6594-a6da-52ce-aec2-46c42b69631a",
+      "version_id": "76162eb1-78f2-49b0-939d-0ee57576c410",
+      "heading_path": [
+        "Part A: Write it yourself"
+      ],
+      "content": "Part A: Write it yourself\n\nNo AI in this part. Write or update these sections on your own. If your idea changed since the pre-work, rewrite them.\n\nOverview. 2-5 sentences, updated from your pre-work. Someone reading only this should understand what you're building.\n\nValue proposition and product-market fit. Update the paragraph from your pre-work: what problem exists, who has it, and why your solution fits it.\n\nTarget markets and users. New in the LOI: 2-3 market segments, and your top 1-2 user profiles. Who they are, what they do today, and what would make them switch.\n\nCompetitor landscape. New in the LOI. Do real research: DefiLlama, Colosseum hackathon winners, GitHub and X. List who already exists, with links, and how you're different.\n\nFounder-market fit. Update it from your pre-work: your background, technical skills, motivation and network. Why you?",
+      "page_start": 1,
+      "page_end": 1,
+      "child_ids": [
+        "581acaed-ba76-5bc2-8236-9828bf752973"
+      ]
+    },
+    {
+      "id": "f17a6f00-3949-5ea9-9cdb-acc29639751a",
+      "version_id": "76162eb1-78f2-49b0-939d-0ee57576c410",
+      "heading_path": [
+        "Part B: Red team it"
+      ],
+      "content": "Part B: Red team it\n\nNow bring in AI and attack everything from Part A, including your founder-market fit. Ask what's missing, such as competitors you didn't find, and where your strategy breaks. Update Phase 1 with the criticism you agree with, and log every main point: accepted or rejected, and why.",
+      "page_start": 2,
+      "page_end": 2,
+      "child_ids": [
+        "5ec55422-7b13-5ebc-8bae-5f6f4ffa6c20"
+      ]
+    },
+    {
+      "id": "623fd7c8-fd7d-5042-933d-93c13dc7dcd4",
+      "version_id": "76162eb1-78f2-49b0-939d-0ee57576c410",
+      "heading_path": [
+        "Phase 2: Actors and use cases"
+      ],
+      "content": "Phase 2: Actors and use cases\n\nIn this phase you describe what people do with your protocol, in plain words. You don't need accounts, PDAs or instruction handlers yet. Those come in Assignment 2, where each use case becomes one or more precise requirements.",
+      "page_start": 2,
+      "page_end": 2,
+      "child_ids": [
+        "ff075858-f790-5cd8-8ef9-f994257906a6"
+      ]
+    },
+    {
+      "id": "ffdd3e31-395c-5383-86fc-ffdccd1d45f1",
+      "version_id": "76162eb1-78f2-49b0-939d-0ee57576c410",
+      "heading_path": [
+        "Part A: Identify the actors"
+      ],
+      "content": "Part A: Identify the actors\n\nList everyone who interacts with your protocol, grouped as:\n\nDirect actors: people who sign transactions, such as creators, buyers or stakers.\n\nBeneficiaries: people who get value without signing anything.\n\nAdministrators: whoever controls the protocol's settings, such as an admin wallet or governance.\n\nStakeholders: anyone else with an interest, such as token holders or liquidity partners.",
+      "page_start": 2,
+      "page_end": 2,
+      "child_ids": [
+        "723273ff-d5d5-5dee-9335-d1a5f206f5a5"
+      ]
+    },
+    {
+      "id": "98701573-f2c6-583d-a687-dd1289a0535a",
+      "version_id": "76162eb1-78f2-49b0-939d-0ee57576c410",
+      "heading_path": [
+        "Part B: Write the use cases"
+      ],
+      "content": "Part B: Write the use cases\n\nA use case is one thing one actor does with your protocol. Give each one an ID (UC-01, UC-02...), because Assignment 2 will trace back to them. Write each one with this template:\n\nID and name: a verb and an object, such as Deposit USDC.\n\nActor: who does it and signs the transaction.\n\nGoal: one sentence on what they want to achieve.\n\nWhat changes: in plain words, what is different on-chain after it happens.\n\nOff-chain: what the app or website does around it, such as showing a confirmation or sending an email.\n\nExample: the main use cases for an invoice-financing protocol, where businesses get paid early for their invoices and lenders earn a fee for funding them. The table shows only the key fields; write every field of the template for your own use cases.\n\n| ID | Name | Actor | What changes |\n|:------|:----------------------|:---------|:--------------------------------------------------------------------|\n| UC-01 | Create a lending pool | Admin | A new pool exists that accepts USDC. |\n| UC-02 | Deposit USDC | Lender | The lender's USDC moves into the pool, and their share is recorded. |\n| UC-03 | Submit an invoice | Business | A new invoice is recorded, waiting for approval. |\n| UC-04 | Approve an invoice | Verifier | The invoice is marked as approved. |\n| UC-05 | Fund an invoice | Business | The business receives an advance from the pool. |\n\n| 0 | 1 | 2 | 3 |\n|:------|:--------------------|:---------|:-------------------------------------------------------------------------|\n| UC-06 | Repay an invoice | Business | The repayment plus a fee returns to the pool, and the invoice is closed. |\n| UC-07 | Withdraw with yield | Lender | The lender gets their USDC back, plus their share of the fees. |\n\nWrite 5-10 use cases that cover the main flow of your protocol, from setup to the core actions. Skip edge cases for now. If a use case does two separate things, such as \"submit and fund an invoice\", split it into two.",
+      "page_start": 2,
+      "page_end": 3,
+      "child_ids": [
+        "04300b2d-a52c-5ef0-8d52-1836a2d88537",
+        "1e6c413a-62c0-50e5-ad58-61a1b44fda6d"
+      ]
+    },
+    {
+      "id": "0692ccdb-5f54-5024-a050-20e1d099cfb6",
+      "version_id": "76162eb1-78f2-49b0-939d-0ee57576c410",
+      "heading_path": [
+        "What to submit"
+      ],
+      "content": "What to submit\n\nOne document (PDF or Google Doc), submitted in Google Classroom, with your name at the top. It has two sections:\n\nSection 1: Your LOI. Your overview, value proposition, target markets, competitors, founder-market fit, actors and use cases. The final version, after the red team. About 2-4 pages.\n\nSection 2: Red-team log. Your first drafts next to the AI's critique, with what you accepted, what you rejected and why. This is your proof of work.",
+      "page_start": 3,
+      "page_end": 3,
+      "child_ids": [
+        "51657297-b9bd-56e9-ba80-97babe089895"
+      ]
+    },
+    {
+      "id": "25c779ea-ce8d-54b8-9d02-f162332709e5",
+      "version_id": "76162eb1-78f2-49b0-939d-0ee57576c410",
+      "heading_path": [
+        "Before you submit"
+      ],
+      "content": "Before you submit\n\nYour overview explains the project in 2-5 sentences.\n\nYour competitor list has real projects, with links.\n\nEvery use case has an ID, a name, an actor, a goal and what changes.\n\nEvery actor who signs a transaction appears in at least one use case.\n\nYour red-team log shows what you accepted and rejected, and why.",
+      "page_start": 3,
+      "page_end": 3,
+      "child_ids": [
+        "f67f62e5-445f-5ad7-976d-9a6bff091d28"
+      ]
+    }
+  ],
+  "children": [
+    {
+      "id": "3b321174-fe46-591e-b598-2200bfa3ebd4",
+      "parent_id": "e7aa990b-0d5d-5b76-981b-923822efe0da",
+      "version_id": "76162eb1-78f2-49b0-939d-0ee57576c410",
+      "content": "Capstone Assignment 1: Letter of Intent (LOI)\n\nThe Letter of Intent builds on your capstone pre-work. You'll take the idea you sketched there and turn it into a clear description of what you're building, who it's for, and what people will do with it. Everything you write here feeds into Assignment 2, where your team turns it into a precise program specification.\n\nYou do this in two phases:\n\nPhase 1: Define the project. What you're building, who it's for, and why you're the right person to build it.\n\nPhase 2: Actors and use cases. Who uses your protocol, and what each of them does with it.\n\nThis is an individual assignment. After you submit it, you'll be grouped into teams. Each team agrees on one idea, which can be one of your LOIs, a mix of several, or something new, and builds it together.",
+      "token_count": 194,
+      "page_start": 1,
+      "page_end": 1,
+      "heading_path": [
+        "Capstone Assignment 1: Letter of Intent (LOI)"
+      ],
+      "source_element_ids": [
+        "element-000000",
+        "element-000001",
+        "element-000002",
+        "element-000003",
+        "element-000004",
+        "element-000005"
+      ]
+    },
+    {
+      "id": "9fbc6755-a2a1-532a-8657-0d0d238a8852",
+      "parent_id": "dfcbc2ce-bd52-5291-aa32-460e469ec646",
+      "version_id": "76162eb1-78f2-49b0-939d-0ee57576c410",
+      "content": "How to use AI\n\nAI does not do this work for you. If AI writes your value proposition, your users or your use cases, you haven't shown that you can think it through, and that is what is being assessed. The order is always the same:\n\nYou draft first. Write your own version before you open an AI tool, and keep it.\n\nThen AI attacks it. Ask it what's missing (\"Here is my analysis. What is absent or underweighted?\") and what's weak (\"Critique this. Where is it weak? What breaks it?\").\n\nThen you decide. Check each point yourself, and record what you accepted, what you rejected and why. This record is part of your submission.",
+      "token_count": 149,
+      "page_start": 1,
+      "page_end": 1,
+      "heading_path": [
+        "How to use AI"
+      ],
+      "source_element_ids": [
+        "element-000006",
+        "element-000007",
+        "element-000008",
+        "element-000009",
+        "element-000010"
+      ]
+    },
+    {
+      "id": "c0507570-b696-5e95-b4dc-c8cdf11ede91",
+      "parent_id": "4f40e370-b620-50ee-b8df-c0a22a3f425d",
+      "version_id": "76162eb1-78f2-49b0-939d-0ee57576c410",
+      "content": "Phase 1: Define the project\n\nStart from your capstone pre-work. Your idea must still fit one of the four categories: Real World Assets, Tokenization, Payments or Collectibles. Scope it to something you can build in two weeks: a narrow slice of one category, not the whole category.",
+      "token_count": 63,
+      "page_start": 1,
+      "page_end": 1,
+      "heading_path": [
+        "Phase 1: Define the project"
+      ],
+      "source_element_ids": [
+        "element-000011",
+        "element-000012"
+      ]
+    },
+    {
+      "id": "581acaed-ba76-5bc2-8236-9828bf752973",
+      "parent_id": "45fe6594-a6da-52ce-aec2-46c42b69631a",
+      "version_id": "76162eb1-78f2-49b0-939d-0ee57576c410",
+      "content": "Part A: Write it yourself\n\nNo AI in this part. Write or update these sections on your own. If your idea changed since the pre-work, rewrite them.\n\nOverview. 2-5 sentences, updated from your pre-work. Someone reading only this should understand what you're building.\n\nValue proposition and product-market fit. Update the paragraph from your pre-work: what problem exists, who has it, and why your solution fits it.\n\nTarget markets and users. New in the LOI: 2-3 market segments, and your top 1-2 user profiles. Who they are, what they do today, and what would make them switch.\n\nCompetitor landscape. New in the LOI. Do real research: DefiLlama, Colosseum hackathon winners, GitHub and X. List who already exists, with links, and how you're different.\n\nFounder-market fit. Update it from your pre-work: your background, technical skills, motivation and network. Why you?",
+      "token_count": 208,
+      "page_start": 1,
+      "page_end": 1,
+      "heading_path": [
+        "Part A: Write it yourself"
+      ],
+      "source_element_ids": [
+        "element-000013",
+        "element-000014",
+        "element-000015",
+        "element-000016",
+        "element-000017",
+        "element-000018",
+        "element-000019"
+      ]
+    },
+    {
+      "id": "5ec55422-7b13-5ebc-8bae-5f6f4ffa6c20",
+      "parent_id": "f17a6f00-3949-5ea9-9cdb-acc29639751a",
+      "version_id": "76162eb1-78f2-49b0-939d-0ee57576c410",
+      "content": "Part B: Red team it\n\nNow bring in AI and attack everything from Part A, including your founder-market fit. Ask what's missing, such as competitors you didn't find, and where your strategy breaks. Update Phase 1 with the criticism you agree with, and log every main point: accepted or rejected, and why.",
+      "token_count": 68,
+      "page_start": 2,
+      "page_end": 2,
+      "heading_path": [
+        "Part B: Red team it"
+      ],
+      "source_element_ids": [
+        "element-000020",
+        "element-000021"
+      ]
+    },
+    {
+      "id": "ff075858-f790-5cd8-8ef9-f994257906a6",
+      "parent_id": "623fd7c8-fd7d-5042-933d-93c13dc7dcd4",
+      "version_id": "76162eb1-78f2-49b0-939d-0ee57576c410",
+      "content": "Phase 2: Actors and use cases\n\nIn this phase you describe what people do with your protocol, in plain words. You don't need accounts, PDAs or instruction handlers yet. Those come in Assignment 2, where each use case becomes one or more precise requirements.",
+      "token_count": 57,
+      "page_start": 2,
+      "page_end": 2,
+      "heading_path": [
+        "Phase 2: Actors and use cases"
+      ],
+      "source_element_ids": [
+        "element-000022",
+        "element-000023"
+      ]
+    },
+    {
+      "id": "723273ff-d5d5-5dee-9335-d1a5f206f5a5",
+      "parent_id": "ffdd3e31-395c-5383-86fc-ffdccd1d45f1",
+      "version_id": "76162eb1-78f2-49b0-939d-0ee57576c410",
+      "content": "Part A: Identify the actors\n\nList everyone who interacts with your protocol, grouped as:\n\nDirect actors: people who sign transactions, such as creators, buyers or stakers.\n\nBeneficiaries: people who get value without signing anything.\n\nAdministrators: whoever controls the protocol's settings, such as an admin wallet or governance.\n\nStakeholders: anyone else with an interest, such as token holders or liquidity partners.",
+      "token_count": 88,
+      "page_start": 2,
+      "page_end": 2,
+      "heading_path": [
+        "Part A: Identify the actors"
+      ],
+      "source_element_ids": [
+        "element-000024",
+        "element-000025",
+        "element-000026",
+        "element-000027",
+        "element-000028",
+        "element-000029"
+      ]
+    },
+    {
+      "id": "04300b2d-a52c-5ef0-8d52-1836a2d88537",
+      "parent_id": "98701573-f2c6-583d-a687-dd1289a0535a",
+      "version_id": "76162eb1-78f2-49b0-939d-0ee57576c410",
+      "content": "Part B: Write the use cases\n\nA use case is one thing one actor does with your protocol. Give each one an ID (UC-01, UC-02...), because Assignment 2 will trace back to them. Write each one with this template:\n\nID and name: a verb and an object, such as Deposit USDC.\n\nActor: who does it and signs the transaction.\n\nGoal: one sentence on what they want to achieve.\n\nWhat changes: in plain words, what is different on-chain after it happens.\n\nOff-chain: what the app or website does around it, such as showing a confirmation or sending an email.\n\nExample: the main use cases for an invoice-financing protocol, where businesses get paid early for their invoices and lenders earn a fee for funding them. The table shows only the key fields; write every field of the template for your own use cases.\n\n| ID | Name | Actor | What changes |\n|:------|:----------------------|:---------|:--------------------------------------------------------------------|\n| UC-01 | Create a lending pool | Admin | A new pool exists that accepts USDC. |\n| UC-02 | Deposit USDC | Lender | The lender's USDC moves into the pool, and their share is recorded. |\n| UC-03 | Submit an invoice | Business | A new invoice is recorded, waiting for approval. |\n| UC-04 | Approve an invoice | Verifier | The invoice is marked as approved. |\n| UC-05 | Fund an invoice | Business | The business receives an advance from the pool. |\n\n| 0 | 1 | 2 | 3 |\n|:------|:--------------------|:---------|:-------------------------------------------------------------------------|\n| UC-06 | Repay an invoice | Business | The repayment plus a fee returns to the pool, and the invoice is closed. |\n| UC-07 | Withdraw with yield | Lender | The lender gets their US",
+      "token_count": 400,
+      "page_start": 2,
+      "page_end": 3,
+      "heading_path": [
+        "Part B: Write the use cases"
+      ],
+      "source_element_ids": [
+        "element-000030",
+        "element-000031",
+        "element-000032",
+        "element-000033",
+        "element-000034",
+        "element-000035",
+        "element-000036",
+        "element-000037",
+        "element-000038",
+        "element-000039"
+      ]
+    },
+    {
+      "id": "1e6c413a-62c0-50e5-ad58-61a1b44fda6d",
+      "parent_id": "98701573-f2c6-583d-a687-dd1289a0535a",
+      "version_id": "76162eb1-78f2-49b0-939d-0ee57576c410",
+      "content": "|:------|:--------------------|:---------|:-------------------------------------------------------------------------|\n| UC-06 | Repay an invoice | Business | The repayment plus a fee returns to the pool, and the invoice is closed. |\n| UC-07 | Withdraw with yield | Lender | The lender gets their USDC back, plus their share of the fees. |\n\nWrite 5-10 use cases that cover the main flow of your protocol, from setup to the core actions. Skip edge cases for now. If a use case does two separate things, such as \"submit and fund an invoice\", split it into two.",
+      "token_count": 124,
+      "page_start": 3,
+      "page_end": 3,
+      "heading_path": [
+        "Part B: Write the use cases"
+      ],
+      "source_element_ids": [
+        "element-000039",
+        "element-000040"
+      ]
+    },
+    {
+      "id": "51657297-b9bd-56e9-ba80-97babe089895",
+      "parent_id": "0692ccdb-5f54-5024-a050-20e1d099cfb6",
+      "version_id": "76162eb1-78f2-49b0-939d-0ee57576c410",
+      "content": "What to submit\n\nOne document (PDF or Google Doc), submitted in Google Classroom, with your name at the top. It has two sections:\n\nSection 1: Your LOI. Your overview, value proposition, target markets, competitors, founder-market fit, actors and use cases. The final version, after the red team. About 2-4 pages.\n\nSection 2: Red-team log. Your first drafts next to the AI's critique, with what you accepted, what you rejected and why. This is your proof of work.",
+      "token_count": 112,
+      "page_start": 3,
+      "page_end": 3,
+      "heading_path": [
+        "What to submit"
+      ],
+      "source_element_ids": [
+        "element-000041",
+        "element-000042",
+        "element-000043",
+        "element-000044"
+      ]
+    },
+    {
+      "id": "f67f62e5-445f-5ad7-976d-9a6bff091d28",
+      "parent_id": "25c779ea-ce8d-54b8-9d02-f162332709e5",
+      "version_id": "76162eb1-78f2-49b0-939d-0ee57576c410",
+      "content": "Before you submit\n\nYour overview explains the project in 2-5 sentences.\n\nYour competitor list has real projects, with links.\n\nEvery use case has an ID, a name, an actor, a goal and what changes.\n\nEvery actor who signs a transaction appears in at least one use case.\n\nYour red-team log shows what you accepted and rejected, and why.",
+      "token_count": 78,
+      "page_start": 3,
+      "page_end": 3,
+      "heading_path": [
+        "Before you submit"
+      ],
+      "source_element_ids": [
+        "element-000045",
+        "element-000046",
+        "element-000047",
+        "element-000048",
+        "element-000049",
+        "element-000050"
+      ]
+    }
+  ]
+}
