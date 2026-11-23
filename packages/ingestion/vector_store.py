@@ -9,7 +9,7 @@ class QdrantVectorStore:
     def __init__(self):
         self.collection_name = os.getenv(
             "QDRANT_COLLECTION",
-            "rag_chunks",
+            "rag_chunks_hybrid",
         )
 
         self.dimension = int(
@@ -20,36 +20,42 @@ class QdrantVectorStore:
             url=os.getenv(
                 "QDRANT_URL",
                 "http://localhost:6333",
-            ),
+            )
         )
 
         self.ensure_collection()
 
     def ensure_collection(self):
 
-        if self.client.collection_exists(self.collection_name):
-            info = self.client.get_collection(self.collection_name)
+        if not self.client.collection_exists(
+            self.collection_name
+        ):
+            self.client.create_collection(
+                collection_name=self.collection_name,
 
-            if info.config.params.vectors.size != self.dimension:
-                raise ValueError(
-                    "Qdrant collection dimension mismatch. "
-                    "Use a new collection or recreate the existing one."
-                )
+                vectors_config={
+                    "dense": models.VectorParams(
+                        size=self.dimension,
+                        distance=models.Distance.COSINE,
+                    )
+                },
 
-            return
+                sparse_vectors_config={
+                    "bm25": models.SparseVectorParams(
+                        modifier=models.Modifier.IDF,
+                    )
+                },
+            )
 
-        self.client.create_collection(
-            collection_name=self.collection_name,
-            vectors_config=models.VectorParams(
-                size=self.dimension,
-                distance=models.Distance.COSINE,
-            ),
-        )
+        # Create payload indexes for frequently used filters.
+        for field in ["document_id", "version_id"]:
+            self.client.create_payload_index(
+                collection_name=self.collection_name,
+                field_name=field,
+                field_schema=models.PayloadSchemaType.KEYWORD,
+            )
 
-    def upsert(
-        self,
-        points: list[models.PointStruct],
-    ):
+    def upsert(self, points: list[models.PointStruct]):
 
         if not points:
             return
@@ -60,9 +66,11 @@ class QdrantVectorStore:
             wait=True,
         )
 
-    def search(
+    def hybrid_search(
         self,
-        vector: list[float],
+        dense_vector: list[float],
+        sparse_indices: list[int],
+        sparse_values: list[float],
         limit: int = 5,
         document_id: str | None = None,
     ):
@@ -81,10 +89,34 @@ class QdrantVectorStore:
                 ]
             )
 
-        return self.client.query_points(
+        sparse_query = models.SparseVector(
+            indices=sparse_indices,
+            values=sparse_values,
+        )
+
+        results = self.client.query_points(
             collection_name=self.collection_name,
-            query=vector,
+
+            prefetch=[
+                models.Prefetch(
+                    query=dense_vector,
+                    using="dense",
+                    limit=max(limit * 4, 20),
+                ),
+                models.Prefetch(
+                    query=sparse_query,
+                    using="bm25",
+                    limit=max(limit * 4, 20),
+                ),
+            ],
+
+            query=models.RrfQuery(
+                rrf=models.Rrf()
+            ),
+
             query_filter=query_filter,
             limit=limit,
             with_payload=True,
-        ).points
+        )
+
+        return results.points
