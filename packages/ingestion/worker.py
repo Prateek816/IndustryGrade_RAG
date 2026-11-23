@@ -1,4 +1,5 @@
 
+import json
 import logging
 import uuid
 
@@ -7,14 +8,12 @@ from sqlalchemy import select
 from packages.core.database import SessionLocal
 from packages.core.models import UploadSession
 from packages.core.services.ingestion_service import IngestionService
+
 from packages.ingestion.validation import (
     FileValidationError,
     validate_uploaded_object,
-
 )
-from packages.storage.s3_client import S3Client
-
-import json
+from packages.ingestion.indexing_service import IndexingService
 
 from packages.ingestion.parsing.docling_parser import (
     parse_rustfs_object,
@@ -23,19 +22,33 @@ from packages.ingestion.parsing.preprocess import (
     preprocess_document,
 )
 
+from packages.storage.s3_client import S3Client
+
+
 logger = logging.getLogger(__name__)
 
 
 def process_upload_session(upload_session_id: uuid.UUID):
     """
-    Validate an uploaded RustFS object and register its document version.
+    Complete document ingestion workflow.
 
-    Safe to retry:
-    - Only claims sessions in 'uploaded' state.
-    - IngestionService handles duplicate SHA-256 hashes.
+    Steps:
+    1. Claim upload session.
+    2. Validate uploaded object.
+    3. Register document version.
+    4. Parse original document.
+    5. Preprocess parsed document.
+    6. Store normalized parsed document in RustFS.
+    7. Chunk, persist and index document.
+    8. Mark upload as completed.
+
+    Upload is completed only after successful indexing.
     """
 
-    # 1. Claim the upload session.
+    # --------------------------------------------------
+    # 1. Claim upload session
+    # --------------------------------------------------
+
     with SessionLocal() as db:
         with db.begin():
             upload = db.scalar(
@@ -45,7 +58,10 @@ def process_upload_session(upload_session_id: uuid.UUID):
             )
 
             if upload is None:
-                logger.error("Upload session %s not found", upload_session_id)
+                logger.error(
+                    "Upload session %s not found",
+                    upload_session_id,
+                )
                 return
 
             if upload.status != "uploaded":
@@ -58,13 +74,17 @@ def process_upload_session(upload_session_id: uuid.UUID):
 
             upload.status = "processing"
 
-            # Copy values before closing the session.
+            # Copy values before closing session.
             document_id = upload.document_id
             storage_key = upload.storage_key
+            filename = upload.filename
             expected_content_type = upload.expected_content_type
             expected_size = upload.expected_size
 
-    # 2. Validate the actual object and calculate SHA-256.
+    # --------------------------------------------------
+    # 2. Validate uploaded object
+    # --------------------------------------------------
+
     try:
         storage = S3Client()
 
@@ -79,6 +99,7 @@ def process_upload_session(upload_session_id: uuid.UUID):
         with SessionLocal() as db:
             with db.begin():
                 upload = db.get(UploadSession, upload_session_id)
+
                 if upload:
                     upload.status = "rejected"
 
@@ -90,20 +111,23 @@ def process_upload_session(upload_session_id: uuid.UUID):
         return
 
     except Exception:
-        # Infrastructure/transient errors should be retryable.
         with SessionLocal() as db:
             with db.begin():
                 upload = db.get(UploadSession, upload_session_id)
+
                 if upload and upload.status == "processing":
                     upload.status = "uploaded"
 
         logger.exception(
-            "Unexpected validation error for %s",
+            "Validation failed for upload %s",
             upload_session_id,
         )
         raise
 
-    # 3. Register the version and create its ingestion job.
+    # --------------------------------------------------
+    # 3. Register document version
+    # --------------------------------------------------
+
     try:
         with SessionLocal() as db:
             registration = IngestionService(db).add_version_to_document(
@@ -118,6 +142,7 @@ def process_upload_session(upload_session_id: uuid.UUID):
         with SessionLocal() as db:
             with db.begin():
                 upload = db.get(UploadSession, upload_session_id)
+
                 if upload and upload.status == "processing":
                     upload.status = "uploaded"
 
@@ -127,54 +152,100 @@ def process_upload_session(upload_session_id: uuid.UUID):
         )
         raise
 
-    
-    # 3.5 Parse and preprocess the original document.
+    # --------------------------------------------------
+    # 4. Parse original document
+    # --------------------------------------------------
 
-    parsed = parse_rustfs_object(
-        storage=storage,
-        storage_key=storage_key,
-        filename=upload.filename,
-    )
+    try:
+        parsed = parse_rustfs_object(
+            storage=storage,
+            storage_key=storage_key,
+            filename=filename,
+        )
 
-    parsed = preprocess_document(parsed)
+        # --------------------------------------------------
+        # 5. Preprocess parsed document
+        # --------------------------------------------------
 
-    parsed_key = (
-        f"processed/{document_id}/"
-        f"{registration.version_id}/parsed.json"
-    )
+        parsed = preprocess_document(parsed)
 
-    storage.put_object(
-        storage_key=parsed_key,
-        body=json.dumps(
-            parsed.to_dict(),
-            ensure_ascii=False,
-            indent=2,
-        ).encode("utf-8"),
-        content_type="application/json",
-    )
+        # --------------------------------------------------
+        # 6. Store normalized parsed document in RustFS
+        # --------------------------------------------------
 
-    logger.info(
-        "Parsing completed: version=%s pages=%s elements=%s chars=%s "
-        "ocr_review=%s parsed_key=%s",
-        registration.version_id,
-        parsed.page_count,
-        len(parsed.elements),
-        parsed.total_characters,
-        parsed.needs_ocr_review,
-        parsed_key,
-    )
-    
-    # 4. Mark upload as completed.
-    with SessionLocal() as db:
-        with db.begin():
-            upload = db.get(UploadSession, upload_session_id)
-            if upload:
-                upload.status = "completed"
+        parsed_key = (
+            f"processed/{document_id}/"
+            f"{registration.version_id}/parsed.json"
+        )
 
-    logger.info(
-        "Upload processed: document=%s version=%s job=%s duplicate=%s",
-        registration.document_id,
-        registration.version_number,
-        registration.job_id,
-        registration.duplicate,
-    )
+        storage.put_object(
+            storage_key=parsed_key,
+            body=json.dumps(
+                parsed.to_dict(),
+                ensure_ascii=False,
+                indent=2,
+            ).encode("utf-8"),
+            content_type="application/json",
+        )
+
+        logger.info(
+            "Parsing completed: version=%s pages=%s elements=%s "
+            "chars=%s ocr_review=%s parsed_key=%s",
+            registration.version_id,
+            parsed.page_count,
+            len(parsed.elements),
+            parsed.total_characters,
+            parsed.needs_ocr_review,
+            parsed_key,
+        )
+
+        # --------------------------------------------------
+        # 7. Chunk, persist and index
+        # --------------------------------------------------
+
+        with SessionLocal() as db:
+            indexing_result = IndexingService(db).index_document(
+                document=parsed,
+                document_id=document_id,
+                version_id=registration.version_id,
+            )
+
+        logger.info(
+            "Vector indexing completed: %s",
+            indexing_result,
+        )
+
+        # --------------------------------------------------
+        # 8. Mark upload as completed
+        # --------------------------------------------------
+
+        with SessionLocal() as db:
+            with db.begin():
+                upload = db.get(UploadSession, upload_session_id)
+
+                if upload:
+                    upload.status = "completed"
+
+        logger.info(
+            "Upload processed successfully: document=%s "
+            "version=%s job=%s duplicate=%s",
+            registration.document_id,
+            registration.version_number,
+            registration.job_id,
+            registration.duplicate,
+        )
+
+    except Exception:
+        logger.exception(
+            "Document processing/indexing failed: upload=%s",
+            upload_session_id,
+        )
+
+        with SessionLocal() as db:
+            with db.begin():
+                upload = db.get(UploadSession, upload_session_id)
+
+                if upload and upload.status == "processing":
+                    upload.status = "uploaded"
+
+        raise
