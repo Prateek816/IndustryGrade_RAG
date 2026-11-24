@@ -13,7 +13,12 @@ from packages.ingestion.runtime import (
     get_vector_store,
     get_reranker,
 )
+from langsmith import traceable
 
+from packages.observability.tracing import (
+    trace_retrieval_inputs,
+    trace_retrieval_outputs,
+)
 class RetrievalService:
     def __init__(self, db):
         self.db = db
@@ -22,7 +27,14 @@ class RetrievalService:
         self.sparse_embedder = get_sparse_embedding_service()
         self.vector_store = get_vector_store()
         self.reranker = get_reranker()
-
+        
+    @traceable(
+        name="rag_retrieval",
+        run_type="retriever",
+        process_inputs=trace_retrieval_inputs,
+        process_outputs=trace_retrieval_outputs,
+        tags=["powerful-rag", "hybrid-search"],
+    )
     def search(
         self,
         query: str,

@@ -8,7 +8,12 @@ from google.genai import types
 
 load_dotenv()
 
+from langsmith import traceable
 
+from packages.observability.tracing import (
+    trace_generation_inputs,
+    trace_generation_outputs,
+)
 class AnswerGenerator:
     def __init__(self):
         api_key = os.getenv("GEMINI_API_KEY")
@@ -28,7 +33,14 @@ class AnswerGenerator:
             "GEMINI_MODEL",
             "gemini-2.5-flash",
         )
-
+    @traceable(
+        name="gemini_answer_generation",
+        run_type="llm",
+        process_inputs=trace_generation_inputs,
+        process_outputs=trace_generation_outputs,
+        metadata={"provider": "google-genai"},
+        tags=["powerful-rag", "gemini"],
+    )
     def generate(self, question: str, context: str) -> dict:
         if not context.strip():
             return {

@@ -5,7 +5,12 @@ from packages.generation.schemas import (
     BuiltContext,
     SourceReference,
 )
+from langsmith import traceable
 
+from packages.observability.tracing import (
+    trace_context_inputs,
+    trace_context_outputs,
+)
 
 class ContextBuilder:
     def __init__(self):
@@ -16,7 +21,13 @@ class ContextBuilder:
         self.max_chars = int(
             os.getenv("RAG_MAX_CONTEXT_CHARS", "18000")
         )
-
+    @traceable(
+        name="context_builder",
+        run_type="chain",
+        process_inputs=trace_context_inputs,
+        process_outputs=trace_context_outputs,
+        tags=["powerful-rag", "context"],
+    )
     def build(self, results: list[dict]) -> BuiltContext:
         sources = []
         context_parts = []

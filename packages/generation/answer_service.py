@@ -11,7 +11,12 @@ from packages.generation.schemas import (
 )
 from packages.generation.runtime import get_answer_generator
 
+from langsmith import traceable
 
+from packages.observability.tracing import (
+    trace_answer_inputs,
+    trace_answer_outputs,
+)
 class AnswerService:
     def __init__(self, db):
         self.retrieval = RetrievalService(db)
@@ -22,7 +27,13 @@ class AnswerService:
         self.min_rerank_score = (
             float(threshold) if threshold else None
         )
-
+    @traceable(
+        name="rag_answer",
+        run_type="chain",
+        process_inputs=trace_answer_inputs,
+        process_outputs=trace_answer_outputs,
+        tags=["powerful-rag", "end-to-end"],
+    )
     def ask(
         self,
         question: str,
