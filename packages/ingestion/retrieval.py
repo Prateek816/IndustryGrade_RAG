@@ -7,16 +7,21 @@ from packages.ingestion.embedding.sparse_embedder import SparseEmbeddingService
 from packages.ingestion.vector_store import QdrantVectorStore
 from packages.ingestion.reranking import CrossEncoderReranker
 
+from packages.ingestion.runtime import (
+    get_embedding_service,
+    get_sparse_embedding_service,
+    get_vector_store,
+    get_reranker,
+)
 
 class RetrievalService:
     def __init__(self, db):
         self.db = db
 
-        self.embedder = EmbeddingService()
-        self.sparse_embedder = SparseEmbeddingService()
-        self.vector_store = QdrantVectorStore()
-
-        self.reranker = CrossEncoderReranker()
+        self.embedder = get_embedding_service()
+        self.sparse_embedder = get_sparse_embedding_service()
+        self.vector_store = get_vector_store()
+        self.reranker = get_reranker()
 
     def search(
         self,

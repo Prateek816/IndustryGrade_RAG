@@ -9,13 +9,14 @@ from packages.generation.schemas import (
     Citation,
     GeneratedAnswer,
 )
+from packages.generation.runtime import get_answer_generator
 
 
 class AnswerService:
     def __init__(self, db):
         self.retrieval = RetrievalService(db)
         self.context_builder = ContextBuilder()
-        self.generator = AnswerGenerator()
+        self.generator = get_answer_generator()
 
         threshold = os.getenv("RAG_MIN_RERANK_SCORE", "").strip()
         self.min_rerank_score = (
